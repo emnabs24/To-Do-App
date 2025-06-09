@@ -1,28 +1,41 @@
-let myInput = document.getElementById('new-task-input');
-let mybtn =  document.getElementById('my-button');
-let mytask =  document.getElementById('task-list');
+let myInput = document.getElementById("new-task-input");
+let mybtn = document.getElementById("my-button");
+let mytask = document.getElementById("task-list");
 
-mybtn.addEventListener('click', function() {
-    let taskText = myInput.value.trim();
-    if (taskText === '')return
+mybtn.addEventListener("click", function () {
+  let taskText = myInput.value.trim();
+  if (taskText === "") return;
 
-    let li = document.createElement('li');
+  let li = document.createElement("li");
 
-    let checkbox = document.createElement('checkbox');
-    checkbox.type = 'checkbox';
+  let checkbox = document.createElement("checkbox");
+  checkbox.type = "checkbox";
 
-    let span = document.createElement('span');
-    span.textContent = taskText;
+  let span = document.createElement("span");
+  span.textContent = taskText;
 
-    let delbtn = document.createElement('button');
-    delbtn.textContent = 'Delete';
-    
-    
-    li.appendChild(checkbox);
-    li.appendChild(span);
-    li.appendChild(delbtn);
-    
-    mytask.appendChild(li);
+  let delbtn = document.createElement("button");
+  delbtn.textContent = "Delete";
 
-    myInput.value = '';
+  delbtn.addEventListener("click", () => {
+    mytask.removeChild(li);
+  });
+
+  li.appendChild(checkbox);
+  li.appendChild(span);
+  li.appendChild(delbtn);
+
+  mytask.appendChild(li);
+
+  myInput.value = "";
+
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+      span.style.textDecoration = "line-through";
+      span.style.color = "#777";
+    } else {
+      span.style.textDecoration = "none";
+      span.style.color = "#000";
+    }
+  });
 });
