@@ -29,5 +29,13 @@ mybtn.addEventListener("click", function () {
 
   myInput.value = "";
 
- 
+  checkbox.addEventListener("change",function ()  {
+    if (checkbox.checked) {
+      span.style.textDecoration = "line-through";
+      span.style.color = "#777";
+    } else {
+      span.style.textDecoration = "none";
+      span.style.color = "#000";
+    }
+  });
 });
