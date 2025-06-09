@@ -17,5 +17,12 @@ mybtn.addEventListener('click', function() {
     let delbtn = document.createElement('button');
     delbtn.textContent = 'Delete';
     
+    
+    li.appendChild(checkbox);
+    li.appendChild(span);
+    li.appendChild(delbtn);
+    
+    mytask.appendChild(li);
 
-})
+    myInput.value = '';
+});
