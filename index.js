@@ -14,6 +14,8 @@ mybtn.addEventListener('click', function() {
     let span = document.createElement('span');
     span.textContent = taskText;
 
+    let delbtn = document.createElement('button');
+    delbtn.textContent = 'Delete';
     
 
 })
