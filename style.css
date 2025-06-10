@@ -27,14 +27,22 @@ h1{
  border-radius: 5px;
 }
 
-li{
-    color: red;
+li {
+    color: rgb(214, 79, 79);
 }
 
 button{
     background-color: red;
     font-size: medium;
+    margin-left: 40px ;
+    border-radius: 20px;
+    border: none;
+    padding: 5px 15px;
+    color: white;
+}
 
+button:hover{
+    background: #000000;
 }
 
 #my-button{
