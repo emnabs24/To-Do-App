@@ -1,0 +1,42 @@
+body{
+    background: linear-gradient(135deg, #153677, #4e085f);
+
+}
+div{
+    background: white;
+    height: 250px;
+    width: 100%;
+    max-width: 40%;
+    margin: auto;
+    padding: 0 50px;
+    border-radius: 25px;
+    
+}
+
+h1{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 20px;
+
+}
+
+#new-task-input{
+ /* margin-bottom: 10px; */
+ /* border: n; */
+ color: transparent;
+ border-radius: 5px;
+}
+
+li{
+    color: red;
+}
+
+button{
+    background-color: red;
+    font-size: medium;
+
+}
+
+#my-button{
+    background-color: green;
+}

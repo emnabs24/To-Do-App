@@ -4,7 +4,9 @@ let mytask = document.getElementById("task-list");
 
 mybtn.addEventListener("click", function () {
   let taskText = myInput.value.trim();
-  if (taskText === "") return;
+  if (taskText === "") {
+    alert('You must add a task')
+  };
 
   let li = document.createElement("li");
 
@@ -13,6 +15,8 @@ mybtn.addEventListener("click", function () {
 
   let span = document.createElement("span");
   span.textContent = taskText;
+
+  
 
   let delbtn = document.createElement("button");
   delbtn.textContent = "Delete";
@@ -29,13 +33,4 @@ mybtn.addEventListener("click", function () {
 
   myInput.value = "";
 
-  checkbox.addEventListener("change",function ()  {
-    if (checkbox.checked) {
-      span.style.textDecoration = "line-through";
-      span.style.color = "#777";
-    } else {
-      span.style.textDecoration = "none";
-      span.style.color = "#000";
-    }
-  });
 });
